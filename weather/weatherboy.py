@@ -36,5 +36,3 @@ print(f'visibility of {visible}')
 
 
 
-
-

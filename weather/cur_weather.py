@@ -1,10 +1,13 @@
 def w_current(lat, lon):
     #imports
     import requests as rq
-    from .api import api_weather
+    import os
+    from dotenv import load_dotenv
+    load_dotenv()
     ###
+    api_weather=os.getenv('api_weather')
     if type(lat) is float and type(lon) is float:
-        r=rq.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_weather()}')
+        r=rq.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_weather}')
         req_code=r.status_code
         if req_code>=200 and req_code<300:
             json_info=r.json()

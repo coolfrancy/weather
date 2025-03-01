@@ -4,11 +4,14 @@
 def forecast(lat,lon):
     #imports
     import requests as rq
-    from .api import api_weather
+    import os
     import datetime as dt
+    from dotenv import load_dotenv
+    load_dotenv()
     ###
+    api_weather=os.getenv('api_weather')
     if type(lat) is float and type(lon) is float:
-        r=rq.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_weather()}&cnt=40')
+        r=rq.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_weather}&cnt=40')
         req_code=r.status_code
         if req_code>=200 and req_code<300:
             json_info=r.json()
@@ -21,7 +24,7 @@ def forecast(lat,lon):
         else:
             return req_code
     else:
-        raise ValueError(f'Invalid lat or lon param, given Lon={lon}, Lat={lat}')
+        raise ValueError(f'Invalid lat or lon param, given Lon={type(lon)}, Lat={type(lat)}')
 
 
 #parse the json to get your date

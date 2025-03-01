@@ -1,12 +1,14 @@
 def gpt_summary(weather):
+    #imports
     import os
     import sys
-
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '/workspaces/WeatherTravel/')))
-    from weather.api import api_gpt
     from openai import OpenAI
-
-    client = OpenAI(api_key=api_gpt())
+    from dotenv import load_dotenv
+    load_dotenv()
+    ###
+    api_gpt=os.getenv('api_gpt')
+    
+    client = OpenAI(api_key=api_gpt)
     completion = client.chat.completions.create(
         model="gpt-4o-mini",
         store=True,
