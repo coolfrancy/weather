@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+    <h1 class="time">Time Frame</h1>
+    <form action="/future" class=time_future method="post">
+        <button type="submit" value="future">future</button>
+    </form>
+
+    <form action="/today" method="post" class="time_today" method="post">
+        <button type="submit" value="today">Today</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<form action="/today_weather" method="post">
+    <input class="'search" type="text" name='Location' placeholder="Location name, zip code, state or country">
+</form>
+{% endblock %}

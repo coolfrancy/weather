@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}asd
+{% block body %}
+    <form action="/future-search" method="post">
+        <input class='search' name='Location' type="text" placeholder="Location name, zip code, state or country">
+
+
+
+        <label class="date" for="numberDropdown">Date:</label>
+            <select class="numbers" id="numberDropdown" name="numbers">
+                <option value="1">{{d_2}}</option>
+                <option value="2">{{d_3}}</option>
+                <option value="3">{{d_4}}</option>
+            </select>
+
+        <label class="time_day" for="dayDropdown">Time of day:</label>
+            <select class="tod" id="dayDropdown" name="days">
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Night">Night</option>
+            </select>
+        
+
+        <button class='submit' type="submit">Submit</button>
+    </form>
+{% endblock %}

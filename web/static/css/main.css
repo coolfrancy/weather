@@ -1,0 +1,75 @@
+/* Apply Grid to the body (or a container) */
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;          
+    place-items: center;  
+    background-color: rgb(19, 18, 18);   
+}
+
+.search{
+    margin:0;
+    font-size:20px;
+    width: 370px;
+    position: relative;
+    top:-5px;
+}
+
+.date{
+    position:relative;
+    top:-2px;
+    display:block;
+    color: white;
+    text-align: left;
+    justify-self: start;
+}
+
+.numbers{
+    position:relative;
+    display:block;
+    left: 40px;
+    top:-20px;
+    text-align: left;
+    justify-self: start;
+}
+
+.submit{
+    position:relative;
+    display:block;
+    left: 320px;
+    top:-77px;
+    text-align: left;
+    justify-self: start;
+}
+
+.time_day{
+    position:relative;
+    display:block;
+    left: 135px;
+    top:-40px;
+    text-align: left;
+    justify-self: start;
+    color:white;
+}
+
+.tod{
+    position:relative;
+    display:block;
+    left: 225px;
+    top:-57px;
+    text-align: left;
+    justify-self: start;
+}
+
+.time{
+    color:white;
+    font-size: xxx-large;
+}
+
+.time_today{
+    padding: 0%;
+}
+
+.time_future{
+    border-radius: 0%;
+}
