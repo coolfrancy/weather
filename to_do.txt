@@ -1,9 +1,2 @@
 ##
 show error page for certain error
-
-##
-make code look pretty
-
-###-big
-add javascript part and drawing info
-
