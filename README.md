@@ -20,7 +20,7 @@ A simple weather website that provides forecasts with AI-generated summaries.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/weather-ai.git
+git clone https://github.com/coolfrancy/weather.git
 
 # Navigate to project directory
 cd /workspaces/weather/web
